@@ -1,0 +1,6 @@
+/* README for binarysearch:
+*     Dictionary with a binary search function. Requires dictionary be sorted.
+*  Maybe add a sort function. Sort an array of entries by word[].
+*
+*
+*/
