@@ -88,13 +88,13 @@ int main(int argc, char *argv[]) {
 
 
 
-    /* entry_index = lookup(dictionary, word, num_entries) */
+     entry_index = lookup(dictionary, word, num_of_entries);
 
 
-    /* if(entry_index != -1)                      */
-    /*    printf the info dictionary[entry_index] */
-    /* else                                       */
-    /*    printf(word not in dictionary)          */
+     if(entry_index != -1)
+        printf("%s\n", dictionary[entry_index].definition);
+     else
+         printf("Sorry, the word %s is not in my dictionary.\n", word);
 
 
     return(0);
