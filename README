@@ -2,5 +2,21 @@
 *     Dictionary with a binary search function. Requires dictionary be sorted.
 *  Maybe add a sort function. Sort an array of entries by word[].
 *
+*  Brain storming:
+*   Develop "projects", but within each project study algorithms. Maybe
+*   go through an Algorithm text book.
 *
+*   What algorithms are used in this program?
+*
+*   How is the solution organized?
+*
+*   What is the problem?
+*     I have have a word: I need a definition.
+*
+*   In literature, what need does a dictionary sate? Simplify the situation.
+*   One situation: I am reading and I come across a word that I don't under-
+*   stand. Ue that simple situation. I have a word, I need to find it's
+*   meaning.
+*
+*   A word goes in and it's definition comes out.
 */
