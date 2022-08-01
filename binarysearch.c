@@ -35,6 +35,7 @@ struct entry
 
 /* function declarations */
 
+int my_strcmp(const char dictionaryword[], const char search[]);
 int lookup(const struct entry dictionary[], const char search[],
         const int entries);
 
@@ -131,7 +132,7 @@ int lookup(const struct entry dictionary[], const char search[],
 
     while(low <= high) {
         mid = (low + high) / 2;
-        result = strcmp(dictionary[mid].word, search);
+        result = my_strcmp(dictionary[mid].word, search);
 
         if(result == -1)
             low = mid + 1;
@@ -146,3 +147,27 @@ int lookup(const struct entry dictionary[], const char search[],
 
 }
 
+
+int my_strcmp(const char dictionaryword[], const char search[]) {
+
+    /* my_strcmp()
+     *   input: adictionary word and the search word
+     *   output: -1 dictionary.word < search word
+     *   output: 1 dictionary.word > search word
+     *   output: 0 dictionary.word = search word
+     *
+    */
+
+    int result, cmp_result;
+
+    cmp_result = strcmp(dictionaryword, search);
+
+    if(cmp_result > 0)
+        result = 1;
+    else if(cmp_result < 0)
+        result = -1;
+    else
+        result = 0;
+
+    return(result);
+}
