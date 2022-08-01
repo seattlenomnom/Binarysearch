@@ -19,6 +19,7 @@
 /* includes */
 
 #include <stdio.h>
+#include <string.h>
 
 
 
@@ -32,23 +33,10 @@ struct entry
 };
 
 
-
-
-
-
-
-
-
 /* function declarations */
 
 int lookup(const struct entry dictionary[], const char search[],
         const int entries);
-
-
-
-
-
-
 
 
 
@@ -139,18 +127,22 @@ int lookup(const struct entry dictionary[], const char search[],
     int low = 0;
     int high = entries - 1;
     int mid;
+    int result;
+
+    while(low <= high) {
+        mid = (low + high) / 2;
+        result = strcmp(dictionary[mid].word, search);
+
+        if(result == -1)
+            low = mid + 1;
+        else if(result == 1)
+            high = mid - 1;
+        else
+            return(mid);    /* found it */
+    }
+
+    return(-1);
 
 
-
-
-
-
-
-
-
-
-
-
-    return(index);
 }
 
